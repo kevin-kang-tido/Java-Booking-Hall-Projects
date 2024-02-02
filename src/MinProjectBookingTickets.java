@@ -139,7 +139,7 @@ public class MinProjectBookingTickets {
 
 
         do {
-            System.out.println("==============[[Application Menu]===================");
+            System.out.println("==============[[Application Menu]]===================");
             System.out.println("1.Booking");
             System.out.println("2.Hall");
             System.out.println("3.Show Time");
@@ -157,8 +157,6 @@ public class MinProjectBookingTickets {
                     char showTimeOption = input.next().charAt(0);
                     System.out.println("*******************************************************");
                     sms();
-                    // hall option :
-                    // A
                     switch (Character.toUpperCase(showTimeOption)) {
                         case 'A':
                             showTheHall(hall, "A", letter);
@@ -183,14 +181,13 @@ public class MinProjectBookingTickets {
                                     if (hall[row][col] == null) {
                                         // hall is the morning hall
                                         hall[row][col] = "BO";
+                                        System.out.println("Enter your your ID: ");
+                                        customerId = input.nextInt();
+                                        System.out.println("Booking Successfully!");
                                     } else {
                                         System.out.println("Cannot buy this cause it not avariable!");
                                     }
                                 }
-                                System.out.println("Enter your your ID: ");
-                                customerId = input.nextInt();
-                                System.out.println("Booking Successfully!");
-
                             } else {
                                 System.out.println("Sorry! This Chair Have been Booked!!!");
                             }
@@ -218,14 +215,13 @@ public class MinProjectBookingTickets {
                                     if (hallTwo[row][col] == null) {
                                         // hall is the morning hall
                                         hallTwo[row][col] = "BO";
+                                        System.out.println("Enter your your ID: ");
+                                        customerId = input.nextInt();
+                                        System.out.println("Booking Successfully!");
                                     } else {
-                                        System.out.println("Cannot buy this cause it not avaiable!");
+                                        System.out.println("Cannot buy this cause it not Avarible!");
                                     }
                                 }
-                                System.out.println("Enter your your ID: ");
-                                customerId = input.nextInt();
-                                System.out.println("Booking Successfully!");
-
                             } else {
                                 System.out.println("Sorry! This Chair Have been Booked!!!");
                             }
@@ -257,22 +253,19 @@ public class MinProjectBookingTickets {
                                     if (hallThree[row][col] == null) {
                                         // hall is the morning hall
                                         hallThree[row][col] = "BO";
+                                        System.out.println("Enter your your ID: ");
+                                        customerId = input.nextInt();
+                                        System.out.println("Booking Successfully!");
                                     } else {
                                         System.out.println("Cannot buy this cause it not avariable!");
                                     }
-                                }else {
-//                                    System.out.println("Enter your your ID: ");
-//                                    customerId = input.nextInt();
-//                                    System.out.println("Booking Successfully!");
                                 }
-
-
                             } else {
                                 System.out.println("Sorry! This Chair Have been Booked!!!");
                             }
                             break;
                         default:
-                            System.out.println("Please Enter :(A | B | C)!:");
+                            System.out.println("Please Enter :(A | B | C)!!!!!!!!!");
                     }
                     break;
                 case 2:
@@ -298,9 +291,7 @@ public class MinProjectBookingTickets {
                     System.out.println(">>>>>>> Reboot Successfully!!!!");
                     break;
                 case 5:
-                    System.out.println(">>>>>>>>>>>>>>>>>>>>>>>> History <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<:");
                     showHistory(hall, hallTwo, hallThree);
-//                    storeValuesWhenInput(hall);
                     break;
                 case 6:
                     System.out.println("Exit The Program!!!");
@@ -312,8 +303,6 @@ public class MinProjectBookingTickets {
 
     }
 
-//    private static String getInputChair(String inputChair) {
-//        return inputChair;
 }
 
 
